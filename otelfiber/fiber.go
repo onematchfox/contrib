@@ -23,7 +23,7 @@ import (
 
 const (
 	tracerKey           = "gofiber-contrib-tracer-fiber"
-	instrumentationName = "github.com/gofiber/contrib/otelfiber"
+	instrumentationName = "github.com/onematchfox/contrib/otelfiber"
 	defaultServiceName  = "fiber-server"
 
 	metricNameHttpServerDuration       = "http.server.duration"

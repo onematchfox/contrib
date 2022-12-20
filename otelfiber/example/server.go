@@ -3,12 +3,13 @@ package main
 import (
 	"context"
 	"errors"
-	"go.opentelemetry.io/otel/sdk/resource"
 	"log"
+
+	"go.opentelemetry.io/otel/sdk/resource"
 
 	"github.com/gofiber/fiber/v2"
 
-	"github.com/gofiber/contrib/otelfiber"
+	"github.com/onematchfox/contrib/otelfiber"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	stdout "go.opentelemetry.io/otel/exporters/stdout/stdouttrace"
@@ -53,7 +54,7 @@ func main() {
 
 func initTracer() *sdktrace.TracerProvider {
 	exporter, err := stdout.New(stdout.WithPrettyPrint())
-	//exporter, err := jaeger.New(jaeger.WithCollectorEndpoint(jaeger.WithEndpoint("http://localhost:14268/api/traces")))
+	// exporter, err := jaeger.New(jaeger.WithCollectorEndpoint(jaeger.WithEndpoint("http://localhost:14268/api/traces")))
 	if err != nil {
 		log.Fatal(err)
 	}
